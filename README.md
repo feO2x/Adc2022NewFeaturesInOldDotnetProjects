@@ -4,6 +4,7 @@ This repo contains slides and example code for my German talk at the Advanced De
 ## Brainstorming
 
 - how to understand and manipulate csproj files
-- Records, IsExternalInit, deconstruction, with
+- Records, IsExternalInit, deconstruction, with keyword
+- Expression bodies, get-only properties, Null-Conditional operator
 - Span<T>, Memory<T>
 - Islands of Joy, decoupling, testability, UI test projects
