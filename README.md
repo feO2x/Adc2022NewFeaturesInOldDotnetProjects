@@ -8,3 +8,4 @@ This repo contains slides and example code for my German talk at the Advanced De
 - Expression bodies, get-only properties, Null-Conditional operator
 - Span<T>, Memory<T>
 - Islands of Joy, decoupling, testability, UI test projects
+- Async I/O
