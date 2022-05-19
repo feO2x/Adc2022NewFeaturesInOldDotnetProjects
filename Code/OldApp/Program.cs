@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace OldApp
+namespace OldApp;
+
+public static class Program
 {
-    public static class Program
+    [STAThread]
+    private static void Main()
     {
-        [STAThread]
-        private static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new MainForm());
     }
 }
