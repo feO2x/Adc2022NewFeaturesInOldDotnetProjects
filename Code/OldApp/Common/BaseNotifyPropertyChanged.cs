@@ -12,7 +12,7 @@ public abstract class BaseNotifyPropertyChanged : INotifyPropertyChanged, IRaise
     /// <summary>
     /// Represents the event that propagates property change notifications.
     /// </summary>
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     void IRaisePropertyChanged.OnPropertyChanged(string memberName) => OnPropertyChanged(memberName);
 
@@ -27,7 +27,7 @@ public abstract class BaseNotifyPropertyChanged : INotifyPropertyChanged, IRaise
     /// of the property or function that called this method using the <see cref="CallerMemberNameAttribute" /> - so you only have to set this parameter explicitly
     /// if you change the value from a different member (we suggest you use the nameof operator in those scenarios).
     /// </param>
-    protected void Set<T>(out T field, T value, [CallerMemberName] string memberName = null)
+    protected void Set<T>(out T field, T value, [CallerMemberName] string? memberName = null)
     {
         field = value;
         OnPropertyChanged(memberName);
@@ -46,7 +46,7 @@ public abstract class BaseNotifyPropertyChanged : INotifyPropertyChanged, IRaise
     /// if you change the value from a different member (we suggest you use the nameof operator in those scenarios).
     /// </param>
     /// <returns>True if <paramref name="value" /> was set on <paramref name="field" /> and the change notification mechanism was raised, else false.</returns>
-    protected bool SetIfDifferent<T>(ref T field, T value, [CallerMemberName] string memberName = null)
+    protected bool SetIfDifferent<T>(ref T field, T value, [CallerMemberName] string? memberName = null)
     {
         if (EqualityComparer<T>.Default.Equals(field, value))
             return false;
